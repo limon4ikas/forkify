@@ -12,8 +12,7 @@ class ResultsView extends View {
   }
 
   _generateMarkupPreview(result) {
-    return `
-    <li class="preview">
+    return `<li class="preview">
     <a class="preview__link" href="#${result.id}">
       <figure class="preview__fig">
         <img src="${result.image}" alt="${result.title}" />
@@ -23,8 +22,7 @@ class ResultsView extends View {
         <p class="preview__publisher">${result.publisher}</p>
       </div>
     </a>
-  </li>
-      `;
+  </li>`;
   }
 }
 
