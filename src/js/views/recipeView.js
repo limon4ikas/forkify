@@ -5,6 +5,12 @@ class RecipeView {
   #parentElement = document.querySelector('.recipe');
   #data;
 
+  addHandlerRender(handler) {
+    ['hashchange', 'load'].forEach(eventType =>
+      window.addEventListener(eventType, handler)
+    );
+  }
+
   render(data) {
     this.#data = data;
     const markup = this.#generateMarkup();
