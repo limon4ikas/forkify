@@ -18,11 +18,14 @@
   },
   "homepage": "https://github.com/limon4ikas/forkify#readme",
   "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
     "parcel": "^2.0.0-nightly.539",
     "sass": "^1.32.4"
   },
   "dependencies": {
     "core-js": "^3.8.2",
+    "fractional": "^1.0.0",
     "regenerator-runtime": "^0.13.7"
   }
 }
