@@ -37,7 +37,8 @@ const controlSearchResults = async function () {
 
     // 1) Get search query
     const query = searchView.getQuery();
-    if (!query) return;
+    if (!query)
+      throw new Error('Search field is empty. Please enter search query');
 
     // 2) Search recipes
     await model.loadSearchResults(query);
@@ -48,7 +49,8 @@ const controlSearchResults = async function () {
     // 4) Render initial pagination buttons
     paginationView.render(model.state.search);
   } catch (error) {
-    console.log(error);
+    resultsView.renderError(`${error}`);
+    console.error(error);
   }
 };
 

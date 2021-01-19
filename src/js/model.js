@@ -108,3 +108,10 @@ const init = function () {
 };
 
 init();
+
+// Debugging
+const clearBookmarks = function () {
+  localStorage.clear('bookmarks');
+};
+
+// clearBookmarks();
